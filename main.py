@@ -4,14 +4,14 @@ import hashlib
 import getpass
 import re
 
-class PasswordChecker:
+class HIBP:
 
     API_range = 'https://api.pwnedpasswords.com/range/'
     API_breachedaccount = 'https://haveibeenpwned.com/api/v2/breachedaccount/'
 
     def __init__(self):
         self.api_version = "2"
-        self.user_agent = 'PasswordChecker-Python'
+        self.user_agent = 'HIBP-Python'
 
     def get_hash(self, password):
         hash_password = hashlib.sha1(password.encode('utf-8')).hexdigest().upper()
@@ -62,6 +62,6 @@ if __name__ == '__main__':
     parser.add_argument("--a", dest="acc", type=str, nargs='?', help="The account to check.")
     args = parser.parse_args()
     if args.pwd is not None:
-        PasswordChecker().pass_checker(args.pwd)
+        HIBP().pass_checker(args.pwd)
     if args.acc is not None:
-        PasswordChecker().acc_checker(args.acc)
+        HIBP().acc_checker(args.acc)
