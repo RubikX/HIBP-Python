@@ -1,4 +1,4 @@
-# PasswordChecker
+# HIBP Python
 A Python wrapper that utilizes Troy Hunt's Pwned Passwords V2 API. 
 
 This script uses the range service which implements the k-Anonymity mathematical property that allows a password to be searched for by its partial hash.
