@@ -9,7 +9,7 @@ As stated by Troy Hunt on his post at https://www.troyhunt.com/ive-just-launched
 
 Usage:
 
-```Python
+```bash
 python main.py --a accountName
 python main.py --p passwordName
 ```
